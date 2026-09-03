@@ -6,6 +6,12 @@
   --cor-texto: #D7F9FF;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
 body {
   background-color: var(--cor-fundo);
@@ -16,10 +22,60 @@ body {
   min-height: 100vh;
 }
 
-
 .caixa-principal {
   background-color: var(--cor-principal);
   width: 90%;
+  max-width: 600px;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.caixa-perguntas {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.caixa-alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Estilo para os botões gerados dinamicamente via JS */
+.caixa-alternativas button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-destaque);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.caixa-alternativas button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  transform: translateY(-2px);
+}
+
+.caixa-resultado {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--cor-secundaria);
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-destaque);
+}
+
+.texto-resultado {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Classe utilitária para esconder a caixa de resultado até a finalização */
+.esconder {
+  display: none;
 }
