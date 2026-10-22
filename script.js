@@ -140,5 +140,10 @@ function mostraResultado(){
    caixaAlternativas.textContent = "";
 }
 
+function aleatorio(Lista){
+    const posicao = Math.floor(Math.random()* Liata.legth);
+    return Lista[posicao];
+}
+
 mostraPergunta();
 
