@@ -141,7 +141,7 @@ function mostraResultado(){
 }
 
 function aleatorio(Lista){
-    const posicao = Math.floor(Math.random()* Liata.legth);
+    const posicao = Math.floor(Math.random()* Lista.legth);
     return Lista[posicao];
 }
 
