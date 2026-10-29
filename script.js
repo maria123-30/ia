@@ -4,7 +4,6 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-
 const perguntas = [
    {
        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
@@ -141,9 +140,8 @@ function mostraResultado(){
 }
 
 function aleatorio(Lista){
-    const posicao = Math.floor(Math.random()* Lista.length);
+    const posicao = Math.floor(Math.random() * Lista.length);
     return Lista[posicao];
 }
 
 mostraPergunta();
-
