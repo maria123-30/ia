@@ -1,44 +1,96 @@
-:root{
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10152e, #253b70);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
     padding: 20px;
+    color: white;
 }
 
-h1{
-    color: var(--cor-destaque);
+.caixa-principal {
+    background-color: #ffffff;
+    color: #202b50;
+    width: 100%;
+    max-width: 650px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4058a5;
+    font-size: 35px;
+}
+
+.caixa-perguntas {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
+    background-color: #4058a5;
+    color: white;
     border: none;
-    border-radius: 15px;
     padding: 15px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+button:hover {
+    background-color: #253b70;
+    transform: scale(1.02);
 }
 
+.caixa-resultado {
+    margin-top: 25px;
+}
+
+.caixa-resultado h2 {
+    color: #4058a5;
+    margin-bottom: 15px;
+}
+
+.texto-resultado {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.novamente-btn {
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .caixa-principal {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .caixa-perguntas {
+        font-size: 19px;
+    }
+}
